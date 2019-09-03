@@ -8,6 +8,10 @@
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('./service-worker.js').then(function() { console.log('Service Worker Registered'); });
    }
+
+   navigator.serviceWorker.addEventListener('message', event => {
+     console.log(event.data.msg, event.data.url);
+   });
   </script>
   <title>Test</title>
   <style>
