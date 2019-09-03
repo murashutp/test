@@ -28,4 +28,4 @@ self.addEventListener('fetch', function(event) {
 }());});
 
 self.clients.matchAll().then(clients =>
-  clients.forEach(client => client.postMessage({'hage' : hage})));
+  clients.forEach(client => client.postMessage({msg: "Hey I just got a fetch from you!",url: "okok"})));
