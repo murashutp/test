@@ -8,6 +8,7 @@ self.addEventListener('activate', function(e) {
 });
 
 self.addEventListener('fetch', function(event) { 
+  console.log('fetch');
   event.waitUntil(async function() {
   // Exit early if we don't have access to the client.
   // Eg, if it's cross-origin.
